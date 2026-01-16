@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomeChef</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <div id="main">
-        <h1>HomeChef и квасик приветствует моих любимых коллег</h1>
+    <div id="app">
+        <h1>HomeChef и квасик приветствует моих любимых коллег!💋</h1>
     </div>
+
+    <script>
+        const tg = window.Telegram.WebApp;
+        
+        tg.expand();
+        
+        const user = tg.initDataUnsafe?.user;
+        if (user) {
+            console.log('Пользователь:', user);
+        }
+        
+    </script>
 </body>
 </html>
